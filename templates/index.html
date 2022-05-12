@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Pracownicy WIŁ, którzy odbyli szkolenie: {% endblock %}</h1>
+    {% for post in posts %}
+        <div class='post'>
+            <p>{{ post['created'] }}</p>
+            <p>{{ post['content'] }}
+
+                {{ post['title'] }}</p>
+
+        </div>
+    {% endfor %}
+{% endblock %}
